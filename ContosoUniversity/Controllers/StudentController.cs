@@ -11,17 +11,17 @@ using ContosoUniversity.Models;
 
 namespace ContosoUniversity.Controllers
 {
-    public class StudentsController : Controller
+    public class StudentController : Controller
     {
         private SchoolContext db = new SchoolContext();
 
-        // GET: Students
+        // GET: Student
         public ActionResult Index()
         {
             return View(db.Students.ToList());
         }
 
-        // GET: Students/Details/5
+        // GET: Student/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,13 +36,13 @@ namespace ContosoUniversity.Controllers
             return View(student);
         }
 
-        // GET: Students/Create
+        // GET: Student/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Students/Create
+        // POST: Student/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -59,7 +59,7 @@ namespace ContosoUniversity.Controllers
             return View(student);
         }
 
-        // GET: Students/Edit/5
+        // GET: Student/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -74,7 +74,7 @@ namespace ContosoUniversity.Controllers
             return View(student);
         }
 
-        // POST: Students/Edit/5
+        // POST: Student/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -90,7 +90,7 @@ namespace ContosoUniversity.Controllers
             return View(student);
         }
 
-        // GET: Students/Delete/5
+        // GET: Student/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -105,7 +105,7 @@ namespace ContosoUniversity.Controllers
             return View(student);
         }
 
-        // POST: Students/Delete/5
+        // POST: Student/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
